@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@200&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	font-family: 'Fraunces', serif;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	text-align: center;
+}
+
+/* Header Section */
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+#header .header {
+	min-height: 8vh;
+	background-color: rgba(0, 0, 0, 0.34);
+	transition: 0.3s ease background-color;
+}
+#header .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+#header .nav-list ul {
+	list-style: none;
+	position: absolute;
+	background-color: rgb(31, 29, 29);
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow: hidden;
+	transition: 1s ease left;
+}
+#header .nav-list ul.active {
+	left: 0;
+}
+#header .nav-list ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#header .nav-list ul a:hover {
+	color: #4facfe;
+}
+#header .nav-list ul li:hover {
+	color: black;
+}
+#header .hamburger {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid white;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(0.8);
+	margin-right: 20px;
+}
+#header .hamburger .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: white;
+	z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: white;
+	transition: .3s ease;
+	transition-property: top, bottom;
+}
+#header .hamburger .bar::after {
+	top: 8px;
+}
+#header .hamburger .bar::before {
+	bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+	bottom: 0px;
+}
+#header .hamburger.active .bar::after {
+	top: 0px;
+}
+#header img {
+	max-width: 120px;
+	background-size: cover;
+	height: 6rem;
+	justify-content: center;
+	align-items: center;
+}
+/* End Header Section */
+
+/* hero Section  */
+#hero {
+	background-image: url(./img/image9.jpeg);
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+}
+
+#hero::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.2;
+	z-index: -1;
+}
+#hero .hero {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 50px;
+	justify-content: flex-start;
+}
+#hero h1 {
+	display: block;
+	width: fit-content;
+	font-size: 4rem;
+	position: relative;
+	color: transparent;
+	animation: text_reveal .5s ease forwards;
+	animation-delay: 1s;
+}
+#hero h1 span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	background-color: rgb(23, 22, 22);
+	animation: text_reveal_box 1s ease;
+	animation-delay: .3s;
+}
+#hero .cta {
+	display: inline-block;
+	padding: 10px 30px;
+	color: rgb(23, 22, 22);
+	background-color: transparent;
+	border: 3px solid rgb(23, 22, 22);
+	font-size: 2.3rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	margin-top: 30px;
+	transition: .3s ease;
+	transition-property: background-color, color;
+}
+#hero .cta:hover {
+	color: white;
+	background-color: rgb(23, 22, 22);
+}
+/* End hero Section  */
+
+/* Cars Section */
+#cars {
+	background-color: #eee;
+	width: 100%;
+	height: 230vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10rem 1.5rem;
+	flex-direction: column;
+}
+.blog-post {
+	width: 100%;
+	max-width: 98rem;
+	padding: 5rem;
+	background-color: #fff;
+	box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+	display: flex;
+	align-items: center;
+	border-radius: 0.8rem;
+	margin-bottom: 50px;
+}
+.blog-post__img {
+	min-width: 35rem;
+	max-width: 35rem;
+	height: 30rem;
+	transform: translateX(-8rem);
+	position: relative;
+}
+.blog-post__img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	border-radius: 0.8rem;
+}
+.blog-post__img::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: abosolute;
+	top: 0;
+	left: 0;
+}
+.blog-post__date span {
+	display: block;
+	color: rgba(0, 0, 0);
+	font-size: 3rem;
+	font-weight: 600;
+	margin: 0.5rem 0;
+}
+.blog-post__title {
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	color: #4facfe;
+}
+.blog-post__text {
+	margin-bottom: 3rem;
+	font-size: 2rem;
+	color: (0, 0, 0, 0.7);
+}
+.blog-post__cta {
+	display: inline-block;
+	padding: 1.5rem 3rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-size: 2rem;
+	color: white;
+	border-radius: 0.8rem;
+	text-decoration: none;
+	background-color: rgb(23, 22, 22);
+}
+.blog-post__cta:hover {
+}
+
+/* End Cars Section*/
+
+/* Key frames */
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0%;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+@keyframes text_reveal {
+	100% {
+		color: white;
+	}
+}
+/* End Key frames */
+
+@media only screen and (min-width: 1200px) {
+	#header .hamburger {
+		display: none;
+	}
+	#header .nav-list ul {
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+	}
+	#header .nav-list ul li {
+		display: inline-block;
+	}
+	#header .nav-list ul li {
+		font-size: 1rem;
+	}
+	#header .nav-list ul a:after {
+		display: none;
+	}
+}
+@media screen and (max-width: 1068px) {
+	.blog-post {
+		max-width: 80rem;
+	}
+	.blog-post__img {
+		min-width: 30rem;
+		max-width: 30rem;
+	}
+}
+@media screen and (max-width: 868px) {
+	.blog-post {
+		max-width: 70rem;
+	}
+}
+@media screen and (max-width: 768px) {
+	.blog-post {
+		padding: 2.5rem;
+		flex-direction: column;
+		margin-bottom: 100px;
+	}
+	.blog-post__img {
+		min-width: 100%;
+		max-width: 100%;
+		transform: translate(0, -8rem);
+	}
+}
