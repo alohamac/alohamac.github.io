@@ -3,60 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empire Idle</title>
-    <link href="styles/style.css" rel= "stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/full_logo.png">
+    <link rel ="stylesheet" href="style.css">
+    <title>Tesla Rentals</title>
 </head>
 <body>
-    
-    <header><h1>American Idle</h1>
-        <nav>
-            <ul class="navbar">
-                <li><button>Home</button></li>
-                <li><button>Shop</button></li>
-                <li><button>Settings</button></li>
-                
-            </ul>
-        </nav>
-        <a class="cta" href="https://www.youtube.com/watch?v=_Qz68dtBiO4" target="_blank"><button>Login</button></a>
-    </header>
+    <!-- Header -->
+    <section id="header">
+        <div class="header container">
+            <nav class="nav-bar">
+                <div class="logo"><img src="img/IMG_logo_white.png"/></div>
+                <div class="nav-list">
+                    <div class="hamburger"><div class="bar"></div></div>
+                    <ul>
+                       <li><a href="#">Home</a></li>
+                       <li><a href="#cars">Our Cars</a></li>
+                       <li><a href="#FAQ">FAQ</a></li>
+                       <li><a href="https://turo.com/us/en/drivers/11280464">Reserve</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <!-- End Header -->
 
-    <div class="grid">
-        <ul class="resources">
-            <li class="box" id="season">0</li>
-            <li class="box" id="food">0</li>
-            <li class="box" id="wood"><img src="images/woodicon-1.png">0</li>
-            <li class="box hidden" id="researchPoints">0</li>
-            <li class="box" id="population">0</li>
-            <li class="box" id="warmth">0</li>
-            <li class="box" id="farmers">0</li>
-            <li class="box" id="lumberjacks">0</li>
-            <li class="box tool" id="axes">0</li>
-        </ul>
-        <div class="button-container">
-            <div class="container-main-2">Yo Andrew Brown go farm some wheat!</div>
-                <div class="food-box"> 
-                    <button class="foodtier1" onclick="gatherFood(); fClicksPerSec()">Gather Food</button>
-                    <button class="farmer" onclick="farmerPop()">Hire Farmer</button>
-                    <button class="foodtier2" onclick="farm()">Buy Farm</button>
-                    <button class="foodtier3" onclick="granary()">Buy Granary</button>
-                    <button class="foodtier4" onclick="watermill()">Buy Watermill</button>
-                    <button class="foodtier5" onclick="plantation()">Buy plantations</button>
-                </div>
-                <div class="tree-box">
-                    <button class="treetier1" onclick="chopWood(); wClicksPerSec()">Cut Tree</button>
-                    <button class="lumberjack" onclick="lumberjacksPop()">Hire Lumberjack</button>
-                    <button class="treetier2" onclick="logCabin()">Buy Log Cabin</button>
-                    <button class="treetier3" onclick="sawmill()">Buy Sawmill</button>
-                    <button class="treetier4" onclick="woodFactory()">Buy Wood Factory</button>
-                </div>
-                            
+<!-- Hero Section-->
+<section id="hero">
+    <div class="hero container">
+        <div>
+            <h1>Local Tesla Car Rentals<span></span></h1>
+            <a href="#cars" type="button" class="cta">Browse Our Cars</a>
         </div>
     </div>
-    
-   
+</section>
+<!-- End Hero Section-->
 
- 
+<!-- Our Cars Section-->
+<section id="cars">
+    <div class="title">
+        <h1>Our Cars</h1>
+    </div>
+    <div class="blog-post">
+        <div class="blog-post__img">
+            <img src="img/image2.jpeg" alt="">
+        </div>
+        <div class="blog-post__info">
+            <div class="blog-post__date">
+                <span>Tesla Model 3</span>
+                
+            </div>
+            <h1 class="blog-post__title">110$/Day</h1>
+            <p class="blog-post__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque quisquam eveniet corporis odit officia neque nulla nesciunt quibusdam rem hic.</p>
+            <a href="https://turo.com/us/en/car-rental/united-states/waipahu-hi/tesla/model-3/856795" class="blog-post__cta">book</a>
+        </div>
+    </div>
+    <div class="blog-post">
+        <div class="blog-post__img">
+            <img src="img/image7.jpeg" alt="">
+        </div>
+        <div class="blog-post__info">
+            <div class="blog-post__date">
+                <span>Tesla Model Y</span>
+                
+            </div>
+            <h1 class="blog-post__title">Price: TBD</h1>
+            <p class="blog-post__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque quisquam eveniet corporis odit officia neque nulla nesciunt quibusdam rem hic.</p>
+            <a href="https://turo.com/us/en/suv-rental/united-states/waipahu-hi/tesla/model-y/887491" class="blog-post__cta">book</a>
+        </div>
+    </div>
+    <div class="blog-post">
+        <div class="blog-post__img">
+            <img src="img/red1.jpeg" alt="">
+        </div>
+        <div class="blog-post__info">
+            <div class="blog-post__date">
+                <span>Tesla Model Y</span>
+                
+            </div>
+            <h1 class="blog-post__title">Price: TBD</h1>
+            <p class="blog-post__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque quisquam eveniet corporis odit officia neque nulla nesciunt quibusdam rem hic.</p>
+            <a href="#" class="blog-post__cta">Book</a>
+        </div>
+    </div>
+</section>
+<!-- FAQ Section -->
+<section id="FAQ">
+    <div class="pics">
+        <img id='lady' src="img/kisspng-tesla-model-x-tesla-motors-car-computer-icons-tesla-5ac5427fd920c7.5700301615228770558894.png" alt="">
+    </div>
+    <div class="faq">
+        <h1>FAQ</h1>
+        <div class="container_faq">
+            <h4>How many team members can I invite?</h4>
+            <img src="img/icon-arrow-down.svg" alt="" class="arrow">
+            <p class="hide">
+                You can invite up to 2 additional users on the Free plan. There is no limit on
+                team members for the Premium plan.</p>
+            <hr>
+        </div>
+        <div class="container_faq">
+            <h4>What is the maximum file upload size?</h4>
+            <img src="img/icon-arrow-down.svg" alt="" class="arrow">
+            <p class="hide">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+            <hr>
+        </div>
+
+        <div class="container_faq">
+            <h4>How do I reset my password?</h4>
+            <img src="img/icon-arrow-down.svg" alt="" class="arrow">
+            <p class="hide">Click “Forgot password” from the login page or “Change password” from your profile page.
+                A reset link will be emailed to you.</p>
+            <hr>
+        </div>
+
+        <div class="container_faq">
+            <h4>Can I cancel my subscription?</h4>
+            <img src="img/icon-arrow-down.svg" alt="" class="arrow">
+            <p class="hide">Yes! Send us a message and we’ll process your request no questions asked.</p>
+            <hr>
+        </div>
+
+        <div class="container_faq">
+            <h4>Is there charging on Oahu?</h4>
+            <img src="img/icon-arrow-down.svg" alt="" class="arrow">
+            <p class="hide">There are fast chargers ran by Hawaiian Electric on the island that require a CHADEMO adapter, which is included with this car. You will get 150-180 miles per hour of charge. Here is the link for locations of the fast chargers and the current charging rates: https://www.hawaiianelectric.com/products-and-services/electric-vehicles/fast-charging-locations
+
+            </p>
+            <hr>
+        </div>
+    </div>
+</section>
+<!-- End FAQ Section -->
+
+<!-- End Our Cars Section- -->
+<footer>
+    <div class="links">
+      <ul><a href="#">Home</a></ul>
+      <ul><a href="#">Reserve</a></ul>
+      <ul><a href="#">FAQ</a></ul>
+      <ul><a href="#">Tesla Refferal</a></ul>
+    </div>
+    <div class="socials">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugiat temporibus ad, delectus mollitia quam a accusantium repellendus cumque ducimus.</p>
+    </div>
+</footer>
+<script src="./app.js"></script>
 </body>
-<script src="index.js" charcset=utf-8" type="text/javascript"></script>
 </html>
